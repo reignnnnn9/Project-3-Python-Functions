@@ -29,20 +29,17 @@ print(f"Average Score: {grade_average:.2f}")
     # Takes an average score as a parameter
     # Returns letter grade: A (90+), B (80-89), C (70-79), D (60-69), F (below 60)
 def get_letter_grade(scores):
-    letter_average = grade_average
-    return letter_average
-l_averave = get_letter_grade(grade_average)
-
-if grade_average >= 90:
-    grade = print("Letter Grade: A")
-elif 80 <= grade_average <= 89:
-    grade = print("Letter Grade: B")
-elif 70 <= grade_average <= 79:
-    grade = print("Letter Grade: C")
-elif 60 <= grade_average <= 69:
-    grade = print("Letter Grade: D")
-else:
-    grade = print("Letter Grade: F")
+    if grade_average >= 90: # FIXED? ===========================================================================
+        return print("Letter Grade: A")
+    elif 80 <= grade_average <= 89:
+        return print("Letter Grade: B")
+    elif 70 <= grade_average <= 79:
+        return print("Letter Grade: C")
+    elif 60 <= grade_average <= 69:
+        return print("Letter Grade: D")
+    else:
+        return print("Letter Grade: F")
+l_average = get_letter_grade(grade_average)
 
 # Display the average and letter grade using your functions
 # Use a while loop to:
