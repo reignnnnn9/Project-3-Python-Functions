@@ -22,27 +22,28 @@ def calculate_average(scores):
     return average
 grade_average = calculate_average(scores)
 
-print("=== GRADE REPORT ===")
-print(f"Test Scores: {scores}")
-print(f"Average Score: {grade_average:.2f}")
 # Create a function get_letter_grade(average) that:
     # Takes an average score as a parameter
     # Returns letter grade: A (90+), B (80-89), C (70-79), D (60-69), F (below 60)
 def get_letter_grade(scores):
     if grade_average >= 90: # FIXED? ===========================================================================
-        return print("Letter Grade: A")
+        return 'Overall Grade: A'
     elif 80 <= grade_average <= 89:
-        return print("Letter Grade: B")
+        return 'Overall Grade: B'
     elif 70 <= grade_average <= 79:
-        return print("Letter Grade: C")
+        return 'Overall Grade: C'
     elif 60 <= grade_average <= 69:
-        return print("Letter Grade: D")
+        return 'Overall Grade: D'
     else:
-        return print("Letter Grade: F")
-l_average = get_letter_grade(grade_average)
+        return 'Overall Grade: F'
+letter_grade = get_letter_grade(scores)
 
 # Display the average and letter grade using your functions
 # Use a while loop to:
     # Ask how many test scores to enter
     # Collect each score from the user
     # Store scores in a list
+print("=== GRADE REPORT ===")
+print(f"Test Scores: {scores}")
+print(f"Average Score: {grade_average:.2f}")
+print(letter_grade) # I don't think I really understood until this final edit lol
